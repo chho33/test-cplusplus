@@ -4,17 +4,25 @@ using namespace std;
 int main() { // why main cannot be void??
   int b0 = 100;
   int b = 10;
-  int *a = &b;
-  //*a = &b0; <-- why??
-  int &t = b;
-  //&t = b0; <-- False! 引用初始化過後不能更改
-  cout << "b = 10; *a = &b; &t = b;" << endl;
+  int* a = &b;
+  //*a = &b0; <-- False, why?? ==> a = &b0
+  int& t = b;
+  cout << "&t: " << &t << endl; 
+  cout << "t: " << t << endl; 
+  t =b0;
+  cout << "int b0 = 100; int b = 10; int* a = &b; int& t = b;" << endl;
   cout << "a[0]: " << a[0] << endl; 
   cout << "a[1]: " << a[1] << endl; 
   cout << "a: " << a << endl; 
   cout << "*a: " << *a << endl; 
-  cout << "t: " << t << endl; 
+  cout << "&a: " << &a << endl; 
   cout << "&t: " << &t << endl; 
+  cout << "t: " << t << endl; 
+  cout << "&b0: " << &b0 << endl; 
+  cout << "b0: " << b0 << endl; 
+  cout << "&b: " << &b << endl; 
+  cout << "b: " << b << endl; 
+
 
   int c[5];
   c[0] = 56;

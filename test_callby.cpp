@@ -31,8 +31,10 @@ int main() { // why main cannot be void??
   cout << "*a: " << a << endl; 
   cout << "&a: " << &a << endl; 
   cout << "double b: " << b << " " << &b << endl;
-  double d2i = double2int(&b);
-  cout << "double2int(&b): " << d2i << " " << &d2i << " <---- addr differ from &b, double can transform to int???" << endl; 
+  double d2i_double = double2int(&b);
+  cout << "double double2int(&b): " << d2i_double << " " << &d2i_double << " <---- addr differ from &b, double can transform to int???" << endl; 
+  int d2i_int = double2int(&b);
+  cout << "int double2int(&b): " << d2i_int << " " << &d2i_int << " <---- addr differ from &b, double can transform to int???" << endl; 
   cout << "3/2 = " << 3/2 << endl; 
   cout << "===== call by test: =====" << endl; 
   cout << "b: " << b << " " << &b << endl; 
